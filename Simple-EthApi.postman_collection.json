@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "4608406e-a4d3-4108-82b8-b61b042a0ae5",
+		"name": "Simple-EthApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Latest Block",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/eth/latest-block",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"eth",
+						"latest-block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Eth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\":\"0x1b08Ed0aBC50FFD72C0470885E82F59473e41269\",\r\n    \"amount\":1,\r\n    \"privateKey\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/eth/send-eth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"eth",
+						"send-eth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/eth/get-balance?address=0xEaC37c8dC63069b4124890C76B51077D97754616",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"eth",
+						"get-balance"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "0xEaC37c8dC63069b4124890C76B51077D97754616"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/eth/get-tx?hash=0x38012105ea031c93babce93a178951a0d46876517b1aa0d9a1c4c87f521c8e7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"eth",
+						"get-tx"
+					],
+					"query": [
+						{
+							"key": "hash",
+							"value": "0x38012105ea031c93babce93a178951a0d46876517b1aa0d9a1c4c87f521c8e7d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Chain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/eth/chain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"eth",
+						"chain"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
